@@ -159,10 +159,12 @@ thead {
 }
 .post p {
     text-align: justify;
+}
+.preview p {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
+  }
 
 .page {
     margin: 0 90px;
@@ -345,9 +347,13 @@ footer {
     line-height: 2.5em;
     text-align: center;
     color: #BBB;
-    margin: 3em 0;
+    margin:8vh 0;
     border: 1px solid #EEE;
     border-radius: 5px;
+    position: sticky;
+    bottom:0;
+    background-color:#fff;
+    height:15%;
 }
 footer p { margin: 0; }
 
@@ -418,4 +424,8 @@ footer p { margin: 0; }
 }
 @page {
     margin: 1.5cm;
+}
+#page-wrapper{
+
+  min-height:76vh;
 }

@@ -20,6 +20,7 @@
     {% endblock head %}
 </head>
 <body>
+    <div id="page-wrapper">
     {% if DISPLAY_HEADER or DISPLAY_HEADER is not defined %}
     <header>
         {% if DISPLAY_MENU or DISPLAY_MENU is not defined %}
@@ -28,6 +29,12 @@
             {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
                 <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/">Home</a></li>
+                {% endif %}
+                {% if DISPLAY_BLOG or DISPLAY_BLOG is not defined %}
+                <li{% if output_file == "blog/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/blog/">Blog</a></li>
+                {% endif %}
+                {% if DISPLAY_RESUME or DISPLAY_RESUME is not defined %}
+                <li{% if output_file == "resume/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/resume/">Resume</a></li>
                 {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in pages %}
@@ -56,6 +63,10 @@
         <div id="content">
             {%- block content -%}{%- endblock %}
 
+        </div>
+        <div class="clear"></div>
+    </div>
+    </div>
             {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
@@ -63,11 +74,10 @@
                 <a href="https://github.com/dervish13">GitHub</a>
                 &middot;
                 <a href="http://twitter.com/dervis13_">Twitter</a>
+                &middot;
+                <a href="http://linkedin.com/KRETENU_PROMENI_OVO">LinkedIN</a>
             </footer>
             {% endif %}
-        </div>
-        <div class="clear"></div>
-    </div>
 {% include 'analytics.html' %}
 </body>
 </html>

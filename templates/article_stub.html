@@ -2,7 +2,11 @@
             <h4 class="date">{{ article.date.strftime("%b %d, %Y") }}</h4>
             {% endif %}
 
+		{% if articles_page %}
+            <article class="post preview">
+		{% else %}
             <article class="post">
+		{% endif %}
                 {% if article.title %}
                 <h2 class="title">
                     <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permanent Link to &quot;{{ article.title }}&quot;">{{ article.title }}</a>
@@ -11,8 +15,8 @@
 
 		{% if not articles_page %}
 		{% include "translations.html" %}
-		{% endif %}                
-                
+		{% endif %}
+
 
                 {{ article.content }}
                 <div class="clear"></div>
