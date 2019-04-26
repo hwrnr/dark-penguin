@@ -26,6 +26,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    background: #000;
 }
 em {
     font-style: italic;
@@ -61,18 +62,25 @@ body {
     font-family: Georgia, serif;
     font-size: 16px;
     line-height: 1.5em;
-    color: #444;
+    color: #AAA;
 }
 
 header, #wrapper {
     padding: 0 10px;
-    max-width: 910px;
     margin: auto;
+}
+
+header {
+    max-width: 90vw;
+}
+
+#wrapper {
+  max-width: 70vw;
 }
 
 a {
     text-decoration: none;
-    color: #08A139;
+    color: #BBB;
 }
 
 ul {
@@ -133,9 +141,12 @@ thead {
 .info a {
     color: inherit;
 }
+.info a:hover{
+  color: #FF0000;
+}
 .info a.tags {
-    background: #CCC;
-    color: #FFF;
+    background: #000;
+    color: #BBB;
     display: inline-block;
     padding: 0 .3em;
     border: 1px transparent solid;
@@ -145,9 +156,10 @@ thead {
 .info a.tags:hover {
     background: inherit;
     color: inherit;
+    color: #FF0000
 }
 .info a.tags.selected {
-    border: 1px #999 solid;
+    border: 1px #solid;
 }
 
 .post {
@@ -167,7 +179,7 @@ thead {
   }
 
 .page {
-    margin: 0 90px;
+    margin: 0 ;
 }
 
 .highlight {
@@ -250,7 +262,7 @@ form.inline_edit {
 nav ul {
     float: right;
     list-style: none;
-    margin: 0 0 0 3em;
+    margin: -0.5px 0 0 0;
     padding: 0;
 }
 nav li {
@@ -261,11 +273,11 @@ nav a {
     padding: 4.5em 10px 10px 10px;
 }
 nav a:hover {
-    background-color: #d3d3d3;
+    background-color: #800000;
     color: #FFF;
 }
 nav li.selected a {
-    background-color: #08A139;
+    background-color: #FF0000;
     color: #FFF;
 }
 
@@ -276,11 +288,15 @@ header h1 {
     font-size: 1.5em;
     line-height: 1em;
     margin: 0;
+    color: #FF0000;
+}
+header h1 a {
+    color: #CCC;
 }
 header h2 {
     font-size: 1em;
     margin: .3em 0;
-    color: #DDD;
+    color: #FF0000;
 }
 
 #content {
@@ -348,7 +364,7 @@ footer {
     text-align: center;
     color: #BBB;
     margin:8vh 0;
-    border: 1px solid #EEE;
+    border: 1px solid #444;
     border-radius: 5px;
     position: sticky;
     bottom:0;
@@ -388,7 +404,7 @@ footer p { margin: 0; }
         margin: 0 0 1.5em 0 !important;
     }
     nav ul {
-        margin: 0 0 1em 0;
+        margin: 0 0 0 0;
     }
 }
 @media print {
@@ -428,4 +444,11 @@ footer p { margin: 0; }
 #page-wrapper{
 
   min-height:76vh;
+}
+h1 {
+  color: #FF0000;
+}
+
+hr {
+  border: 1px solid red;
 }

@@ -30,12 +30,6 @@
                 {% if DISPLAY_HOME or DISPLAY_HOME is not defined %}
                 <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/">Home</a></li>
                 {% endif %}
-                {% if DISPLAY_BLOG or DISPLAY_BLOG is not defined %}
-                <li{% if output_file == "blog/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/blog/">Blog</a></li>
-                {% endif %}
-                {% if DISPLAY_RESUME or DISPLAY_RESUME is not defined %}
-                <li{% if output_file == "resume/index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}/resume/">Resume</a></li>
-                {% endif %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                 {% for p in pages %}
                 <li{% if p == page %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
@@ -67,17 +61,18 @@
         <div class="clear"></div>
     </div>
     </div>
-            {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
+          {% if DISPLAY_FOOTER or DISPLAY_FOOTER is not defined %}
             <div class="clear"></div>
             <footer>
                 <p>
-                <a href="https://github.com/dervish13">GitHub</a>
-                &middot;
-                <a href="http://twitter.com/dervis13_">Twitter</a>
-                &middot;
-                <a href="http://linkedin.com/KRETENU_PROMENI_OVO">LinkedIN</a>
+                  &middot;
+                  {% for title, link in FOOTERITEMS %}
+                  <a target="_blank" rel="noopener noreferrer" href="{{ link }}"> {{ title }}</a>
+                  &middot;
+                  {% endfor %}
+                </p>
             </footer>
-            {% endif %}
+          {% endif %}
 {% include 'analytics.html' %}
 </body>
 </html>
