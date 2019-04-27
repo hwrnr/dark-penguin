@@ -80,7 +80,7 @@ header {
 
 a {
     text-decoration: none;
-    color: #BBB;
+    color: #DDD;
 }
 
 ul {
@@ -285,7 +285,7 @@ header .header_box {
     padding-top: 4.5em;
 }
 header h1 {
-    font-size: 1.5em;
+    font-size: 3em;
     line-height: 1em;
     margin: 0;
     color: #FF0000;
@@ -338,6 +338,15 @@ header h2 {
     display: block;
     margin: 0 160px;
     text-align: center;
+}
+
+.page h1{
+  font-size: 3em;
+}
+
+.page p{
+  font-size: 1.5em;
+  line-height: 1em;
 }
 
 code {
@@ -451,4 +460,16 @@ h1 {
 
 hr {
   border: 1px solid red;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #666;
+}
+
+::selection {
+  background: #666;
 }
